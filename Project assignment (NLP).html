@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Content and Activity Page</title>
+	<link rel="stylesheet" href="/shared/Templates/01_eCentennial/_html/../js/jquery-ui.css">
+	<link rel="stylesheet" href="/shared/Templates/01_eCentennial/_html/../css/ecentennial.css">
+	<link rel="stylesheet" href="/shared/Templates/01_eCentennial/_html/../css/font-awesome.css">
+</head><body role="document"><h1 class="content-icon-text">NLP Project</h1>
+<h2 class="content-icon">Overview</h2>
+<p>In this project you will work in groups of<span style="color: #009e0f; font-size: 12pt;"> <strong>seven </strong></span>to build a simple text classifier using the&nbsp; <strong><span style="color: #009900;">"Bag of words"</span></strong>&nbsp; language model &amp; the <strong><span style="color: #009900;">Navie Bayes</span> </strong>classifier. As you know movies on <span style="color: #009900;"><strong>Youtube</strong></span> are very common and once a movie is made available many comments are posted over the internet by viewers in response to the movie. But in some instances these comments are auto generated and considered <strong><span style="color: #009900;">spam.</span></strong></p>
+<p>The purpose of your model is to filter the spam comments by training an Naive Bayes classifier.&nbsp; The data is available for five movies at the UCI machine learning repository.&nbsp;&nbsp;</p>
+<p>Each team should group <span style="text-decoration: underline;">will be assigned</span> a movie comments file to work on by the professor.</p>
+<p></p>
+<h2 class="content-icon">Due date and submission &amp; presentation</h2>
+<p>Due date for code submission and presentation is week #13. Each group will have ten minutes to demo the code and the results, all team members should participate in the presentation.&nbsp;</p>
+<p>Presentations can happen during the optional scheduled virtual session timing, if a group cannot make that time, then a different time <span style="text-decoration: underline;">during that day</span>&nbsp;should be mutually agreed with the professor.</p>
+<h2 class="content-icon">Data</h2>
+<p>The data can be downloaded from the "UCI machine learning repository"&nbsp; at this link : <a href="https://archive.ics.uci.edu/ml/datasets/YouTube+Spam+Collection" target="_blank" rel="noopener">https://archive.ics.uci.edu/ml/datasets/YouTube+Spam+Collection</a> &nbsp;</p>
+<h2 class="content-icon">Requirements</h2>
+<ol>
+<li>Load the data into a pandas data frame.</li>
+<li>Carry out some basic data exploration and present your results. (Note: You only need two columns for this project, make sure you identify them correctly, if any doubts ask your professor)</li>
+<li>Using <span style="color: #009900;"><strong>nltk toolkit </strong><span style="color: #000000;">classes and methods <span style="text-decoration: underline;">prepare the data</span> for model building, refer to the third lab tutorial in module 11 (Building a&nbsp;Category text predictor&nbsp;). Use count_vectorizer.fit_transform().</span></span></li>
+<li><span style="color: #009900;"><span style="color: #000000;">Present highlights of the output (initial features) such as the new shape of the data and any other useful information before proceeding. </span></span></li>
+<li><span style="color: #009900;"><span style="color: #000000;">Downscale the transformed data using <strong><span style="color: #009900;">tf-idf</span></strong> and again present highlights of the output (final features) such as the new shape of the data and any other useful information before proceeding.</span></span></li>
+<li><span style="color: #009900;"><span style="color: #000000;">Use pandas.sample to shuffle the dataset, set frac =1&nbsp;</span></span></li>
+<li><span style="color: #009900;"><span style="color: #000000;"><span style="text-decoration: underline;">Using pandas</span> split your dataset into 75% for training and 25% for testing, make sure to separate the class from the feature(s). (Do not use test_train_ split)</span></span></li>
+<li><span style="color: #009900;"><span style="color: #000000;">Fit the training data into a <strong><span style="color: #009900;">Naive Bayes classifier.</span></strong>&nbsp;</span></span></li>
+<li><span style="color: #009900;"><span style="color: #000000;">Cross validate the model on the training data using 5-fold and print the mean results of model accuracy.</span></span></li>
+<li><span style="color: #009900;"><span style="color: #000000;">Test the model on the test data, print the confusion matrix and the accuracy of the model.</span></span></li>
+<li><span style="color: #009900;"><span style="color: #000000;">As a group come up with 6 new comments (4 comments should be non spam and 2 comment spam) and pass them to the classifier and check the results. You can be very creative and even do more&nbsp;<img src="https://s.brightspace.com/lib/emoticons/1.0.0/happy-light.svg" alt="happy with light skin tone emoticon" data-d2l-emoji="happy-light" data-d2l-editor-default-img-style="true" style="max-width: 100%;">.</span></span></li>
+<li><span style="color: #009900;"><span style="color: #000000;">Present all the results and conclusions.</span></span></li>
+<li><span style="color: #009900;"><span style="color: #000000;">Drop code, report and power point presentation into the project assessment folder for grading.</span></span></li>
+</ol>
+<h2 class="content-icon">Rubric</h2>
+<p>The following will be considered when grading:</p>
+<table style="height: 245px;">
+<tbody>
+<tr style="height: 32px;">
+<td style="width: 216px; height: 32px;"></td>
+<td style="width: 217px; height: 32px;"></td>
+<td style="width: 217px; height: 32px;">
+<p>Excellent</p>
+<p>(80%-100%)</p>
+</td>
+<td style="width: 217px; height: 32px;">
+<p>Good</p>
+<p>(51%-79%)</p>
+</td>
+<td style="width: 217px; height: 32px;">
+<p>Weak</p>
+<p>(0%-50%)</p>
+</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 216px; height: 32px;">Basic Data exploration</td>
+<td style="width: 217px; height: 32px;">15%</td>
+<td style="width: 217px; height: 32px;">Correct loading of the data and presentation showing a clear understanding. Thorough analysis is evident, through facts presented.</td>
+<td style="width: 217px; height: 32px;">Some analysis done but missing a few facts.</td>
+<td style="width: 217px; height: 32px;">Incorrect loading or presentment of data or correct loading but with minimum or no analysis, indicating lack of understanding.</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 216px; height: 32px;">Data pre-processing</td>
+<td style="width: 217px; height: 32px;">25%</td>
+<td style="width: 217px; height: 32px;">
+<p>Working code, no additional variables. Correct selection of classes and methods.</p>
+<p>Optimized and well commented code.</p>
+</td>
+<td style="width: 217px; height: 32px;">Working code with minor issues. Not the best choice for classes and methods used.</td>
+<td style="width: 217px; height: 32px;">Code not working. Wrong use of Classes and methods.</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 216px; height: 32px;">Model training</td>
+<td style="width: 217px; height: 32px;">20%</td>
+<td style="width: 217px; height: 32px;">
+<p>Working code, no additional variables.</p>
+<p>Optimized and well commented code.</p>
+</td>
+<td style="width: 217px; height: 32px;">Working code with minor issues. Not the best choice for classes and methods used.</td>
+<td style="width: 217px; height: 32px;">Code not working. Wrong use of Classes and methods.</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 216px; height: 32px;">Model testing</td>
+<td style="width: 217px; height: 32px;">20%</td>
+<td style="width: 217px; height: 32px;">
+<p>Working code, no additional variables.</p>
+<p>Optimized and well commented code.</p>
+</td>
+<td style="width: 217px; height: 32px;">Working code with minor issues. Not the best choice for classes and methods used.</td>
+<td style="width: 217px; height: 32px;">Code not working. Wrong use of Classes and methods.</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 216px; height: 53px;">Presentation (Code and results)</td>
+<td style="width: 217px; height: 53px;">20%</td>
+<td style="width: 217px; height: 53px;">All team members participated and showed collaboration.</td>
+<td style="width: 217px; height: 53px;">All team members participated, but there were inconsistencies indicating lack of coordination.</td>
+<td style="width: 217px; height: 53px;">Some team members did not show for presentation. Complete disorganization</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p class="footer">&nbsp;</p>
+<p>
+<script src="/shared/Templates/01_eCentennial/_html/../js/external/jquery/jquery.js"></script>
+<script src="/shared/Templates/01_eCentennial/_html/../js/jquery-ui.js"></script>
+<script src="/shared/Templates/01_eCentennial/_html/../js/ecentennial.js"></script>
+</p></body></html>
